@@ -13,6 +13,9 @@
         android:layout_height="wrap_content"
         android:hint="@string/custo_do_servi_o"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/como_foi_o_atendimento"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/custo_de_servico" />
 
@@ -37,35 +41,41 @@
             android:id="@+id/opcao_vinte_porcento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/incrivel_20" />
+            android:text="@string/incrivel_20"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/opcao_dezoito_porcento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/timo_18" />
+            android:text="@string/timo_18"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/opcao_quinze_porcento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/bom_15" />
+            android:text="@string/bom_15"
+            android:textColor="#000000" />
 
     </RadioGroup>
 
     <Switch
         android:id="@+id/adicionar_gorjeta"
-        android:layout_width="379dp"
-        android:layout_height="wrap_content"
+        android:layout_width="352dp"
+        android:layout_height="47dp"
         android:layout_marginTop="8dp"
         android:checked="true"
+        android:minHeight="48dp"
         android:text="@string/adicionar_gorjeta"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/caixa_de_opcoes" />
 
     <Button
-        android:id="@+id/calculate_button"
+        android:id="@+id/calcular_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/calcular"
@@ -75,11 +85,12 @@
 
     <TextView
         android:id="@+id/resuldado_gorjeta"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/valor_da_gorjeta"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
+        app:layout_constraintTop_toBottomOf="@+id/calcular_button"
+        tools:text="Valor da gorjeta: " />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
