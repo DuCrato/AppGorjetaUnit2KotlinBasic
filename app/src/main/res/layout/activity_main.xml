@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/custo_de_servico"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/custo_do_servi_o"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/foi_atendimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/como_foi_o_atendimento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/custo_de_servico" />
+
+    <RadioGroup
+        android:id="@+id/caixa_de_opcoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/opcao_vinte_porcento"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/foi_atendimento">
+
+        <RadioButton
+            android:id="@+id/opcao_vinte_porcento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/incrivel_20" />
+
+        <RadioButton
+            android:id="@+id/opcao_dezoito_porcento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timo_18" />
+
+        <RadioButton
+            android:id="@+id/opcao_quinze_porcento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bom_15" />
+
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/adicionar_gorjeta"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text="@string/adicionar_gorjeta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caixa_de_opcoes" />
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/adicionar_gorjeta" />
+
+    <TextView
+        android:id="@+id/resuldado_gorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_da_gorjeta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
